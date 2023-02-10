@@ -6,9 +6,17 @@ mod GenericComm {
         fn read(&self); 
     }
 }
+
+mod GenericCommV2 {
+    /// interface definition for communication
+    pub trait CommInter {
+        fn speak(&self);
+        fn read(&self); 
+    }
+}
     
 mod Windows {
-    use crate::GenericComm::CommInter;
+    use crate::GenericCommV2::CommInter;
 
     pub struct WindowsSocket {
         
